@@ -42,4 +42,47 @@
             gap: 84px;
         }
     }
+    .banner {
+        padding: 120px 0 160px;
+        background-image: url('../img/bg-laptop.jpg');
+        &__wrapper {
+            max-width: 510px;
+        }
+        &__subtitle {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+        &__title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        &__timer {
+            margin-bottom: 56px;
+        }
+        &__btn {
+            font-size: 16px;
+            line-height: 16px;
+            padding: 17px 20px;
+        }
+    }
+    .timer {
+        gap: 8px;
+        &__item {
+            flex-basis: 120px;
+        }
+        &__unit {
+            padding: 11px;
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+        &__description {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .banner {
+        background-image: url('../img/bg.jpg');
+    }
 }
