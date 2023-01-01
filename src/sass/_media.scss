@@ -1,0 +1,45 @@
+@media (min-width: 560px) {
+    .header {
+        &__logo {
+            margin-right: auto;
+        }
+        &__navigation {
+            order: 0;
+            flex-basis: auto;
+            margin-right: 50px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 34px;
+    }
+    .banner {
+        padding: 60px 0 90px;
+        background-image: url('../img/bg-tablet.jpg');
+        background-position: center;
+        background-size: contain;
+        margin-bottom: 40px;
+        &__wrapper {
+            max-width: 331px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 77px;
+    }
+    .header {
+        font-size: 20px;
+        &__navigation {
+            margin-right: 84px;
+        }
+    }
+    .navigation {
+        &__list {
+            gap: 84px;
+        }
+    }
+}

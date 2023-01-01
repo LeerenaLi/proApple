@@ -1,0 +1,21 @@
+.timer {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    text-align: center;
+    &__item {
+        flex: 0 0 80px;
+    }
+    &__unit {
+        background-color: #A3B6C7;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 26px;
+        color: #FFFFFF;
+        padding: 8px;
+        margin-bottom: 4px;
+    }
+    &__description {
+        font-weight: 300;
+    }
+}

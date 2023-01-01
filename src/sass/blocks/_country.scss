@@ -1,0 +1,21 @@
+.country {
+    &__list {
+        display: none;
+    }
+    &__btn {
+        position: relative;
+        padding-right: 13px;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 9px;
+            height: 6px;
+            background: url('../icons/arrow_down.svg') no-repeat center;
+        }
+    }
+    
+}
