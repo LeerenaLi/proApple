@@ -1,0 +1,17 @@
+.footer {
+    padding: 20px 0 30px;
+    background-color: #000;
+    color: #fff;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    &__copyright {
+        font-weight: 200;
+        font-size: 14px;
+    }
+}

@@ -1,6 +1,9 @@
 .navigation {
     &__list {
         display: flex;
-        gap: 50px;
+        gap: 20px 50px;
+    }
+    &__list_column {
+        flex-direction: column;
     }
 }
