@@ -209,7 +209,40 @@
         }
     }
     .footer {
+        font-size: 20px;
         &__copyright {
+            font-size: 16px;
+        }
+    }
+    .modal {
+        &__wrapper {
+            padding: 60px 40px 80px;
+        }
+        &__title {
+            font-size: 40px;
+            margin-bottom: 48px;
+        }
+    }
+    .form {
+        flex-direction: row;
+        gap: 0 22px;
+        width: 100%;
+        &__input {
+            width: 225px;
+        }
+        &__submit {
+            width: 225px;
+        }
+        &__placeholder_active {
+            top: -15px;
+        }
+    }
+    .country {
+        &__list {
+            max-height: 106px;
+        }
+        &__item {
+            margin-bottom: 10px;
             font-size: 16px;
         }
     }

@@ -1,0 +1,27 @@
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    &__wrapper {
+        width: fit-content;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 40px 20px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+.modal__open {
+    display: block;
+}

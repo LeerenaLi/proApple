@@ -1,10 +1,9 @@
 .country {
-    &__list {
-        display: none;
-    }
+    position: relative;
     &__btn {
         position: relative;
         padding-right: 13px;
+        cursor: pointer;
         &::after {
             content: '';
             position: absolute;
@@ -17,5 +16,43 @@
             background: url('../icons/arrow_down.svg') no-repeat center;
         }
     }
-    
+    &__wrapper {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        width: 184px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        padding: 16px 8px 16px 16px;
+    }
+    &__wrapper_open {
+        display: block;
+    }
+    &__list {
+        max-height: 98px;
+    }
+    &__item {
+        margin-bottom: 8px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+    &__scrollbar {
+        background: #ECECEC;
+        border-radius: 2px;
+    }
+    &__track {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        width: 4px;
+        z-index: 1;
+    }
 }
