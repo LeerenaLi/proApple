@@ -125,4 +125,62 @@ countryWrapper.addEventListener('click', ({target}) => {
     }
 });
 
+// timer
+
+// склонение, возвращает только слово
+
+const declOfNum = (n, titles) => titles[n % 10 === 1 && n % 100 !== 11 ?
+    0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2];
+
+const timer = (deadline) => {
+    const unitDays = document.querySelector('.timer__unit_days');
+    const unitHours = document.querySelector('.timer__unit_hours');
+    const unitMinutes = document.querySelector('.timer__unit_minutes');
+
+    const descriptionDays = document.querySelector('.timer__description_days');
+    const descriptionHours = document.querySelector('.timer__description_hours');
+    const descriptionMinutes = document.querySelector('.timer__description_minutes');
+
+    const getTimeRemaining = () => {
+        const dateStop = new Date(deadline).getTime();
+        const dateNow = Date.now();
+        const timeRemaining = dateStop - dateNow;
+
+        // const secondes = timeRemaining / 1000 % 60;
+
+        const minutes = Math.floor(timeRemaining / 1000 / 60 % 60);
+
+        const hours = Math.floor(timeRemaining / 1000 / 60 / 60 % 24);
+
+        const days = Math.floor(timeRemaining / 1000 / 60 / 60 / 24);
+
+        return {timeRemaining, minutes, hours, days};
+    };
+
+    const start = () => {
+        const startTimer = getTimeRemaining();
+
+        unitDays.textContent = startTimer.days;
+        unitHours.textContent = startTimer.hours;
+        unitMinutes.textContent = startTimer.minutes;
+
+        descriptionDays.textContent = declOfNum(startTimer.days, ['день', 'дня', 'дней']);
+        descriptionHours.textContent = declOfNum(startTimer.hours, ['час', 'часа', 'часов']);
+        descriptionMinutes.textContent = declOfNum(startTimer.minutes, ['минута', 'минуты', 'минут']);
+
+        const intervalId = setTimeout(start, 60000);
+
+        if (startTimer.timeRemaining < 0) {
+            clearTimeout(intervalId);
+            unitDays.textContent = '0';
+            unitHours.textContent = '0';
+            unitMinutes.textContent = '0';
+        }
+    };
+
+    start();
+};
+
+timer('2023/12/07 20:00');
+
 
