@@ -28,6 +28,18 @@
         border-radius: 32px;
         font-size: 14px;
     }
+    &__btn:hover {
+        text-decoration: none;
+        background: #2238FF;
+        color: #fff;
+    }
+    &__btn:focus {
+        background: #CCCCCC;
+    }
+    &__btn:active {
+        background: #CCCCCC;
+        border: 1px solid #CCCCCC;
+    }
 }
 
 

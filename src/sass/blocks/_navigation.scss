@@ -6,4 +6,8 @@
     &__list_column {
         flex-direction: column;
     }
+    &__link:hover {
+        color: #2238FF;
+        text-decoration: none;
+    }
 }

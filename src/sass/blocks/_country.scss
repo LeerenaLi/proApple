@@ -39,6 +39,9 @@
         font-size: 14px;
         line-height: 19px;
     }
+    &__choice:hover {
+        color: #2238FF;
+    }
     &__item:last-child {
         margin-bottom: 0;
     }

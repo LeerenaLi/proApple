@@ -42,4 +42,13 @@
             background: url('../icons/arrow_left.svg') no-repeat center;
         }
     }
+    &__more:hover {
+        color: #0017E6;
+    }
+    &__more:active {
+        color: #8793FF;
+    }
+    &__more:focus {
+        color: #CCCCCC;
+    }
 }
